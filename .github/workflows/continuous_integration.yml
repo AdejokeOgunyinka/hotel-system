@@ -52,6 +52,7 @@ jobs:
         CLOUDINARY_CLOUD_NAME: ${{secrets.CLOUDINARY_API_SECRET}}
         CLOUDINARY_API_KEY: ${{secrets.CLOUDINARY_API_KEY}}
         CLOUDINARY_API_SECRET: ${{secrets.CLOUDINARY_API_SECRET}}
+        ENVIRONMENT: ${{secrets.ENVIRONMENT}}
 
       run: |
         python manage.py migrate
@@ -62,5 +63,6 @@ jobs:
         CLOUDINARY_CLOUD_NAME: ${{secrets.CLOUDINARY_API_SECRET}}
         CLOUDINARY_API_KEY: ${{secrets.CLOUDINARY_API_KEY}}
         CLOUDINARY_API_SECRET: ${{secrets.CLOUDINARY_API_SECRET}}
+        ENVIRONMENT: ${{secrets.ENVIRONMENT}}
       run: |
         python manage.py test
