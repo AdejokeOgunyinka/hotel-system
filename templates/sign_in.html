@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %} 
+
+{% block content%}
+<section class="w3l-breadcrumb">
+  <div class="breadcrum-bg py-sm-5 py-4">
+    <div class="container py-lg-3">
+      <h2>Sign In</h2>
+      <p><a href="{% url 'home' %}">Home</a> &nbsp; / &nbsp; Sign In</p>
+    </div>
+  </div>
+</section>
+<section class="w3l-contact-1 py-5">
+  <div
+    class="container"
+    style="width: 400px; height: 350px; border: 1px solid black; border-radius: 20px;"
+  >
+    <h1 style="margin-bottom: 15px"></h1>
+    <form method="post" action="{% url 'login' %}">
+      {% csrf_token %} 
+      {{ form|crispy }}
+      <button type="submit" class="btn btn-primary">Sign In</button>
+    </form>
+  </div>
+</section>
+{% endblock  %}
