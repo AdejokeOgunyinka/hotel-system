@@ -1,4 +1,5 @@
 import dj_database_url
+import django_heroku
 from decouple import config
 from .base import *
 
@@ -12,3 +13,6 @@ ALLOWED_HOSTS = ['0.0.0.0', '127.0.0.1']
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
+
+# Activate Django-Heroku.
+django_heroku.settings(locals())
