@@ -10,7 +10,7 @@ class Receptionist(models.Model):
     first_name = models.CharField(max_length=255, unique=True)
     last_name = models.CharField(max_length=255, unique=True)
     gender = models.CharField(max_length=10)
-    avatar_url = CloudinaryField(null=True) 
+    avatar = CloudinaryField(null=True) 
     created_at = models.DateTimeField(auto_now_add=True, null=True)
     updated_at = models.DateTimeField(auto_now=True, null=True)
 
