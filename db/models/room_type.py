@@ -8,5 +8,9 @@ class RoomType(models.Model):
     created_at = models.DateTimeField(auto_now_add=True, null=True)
     updated_at = models.DateTimeField(auto_now=True, null=True)
 
+    def __str__(self):
+        return self.type
+    
+
     class Meta:
         app_label="db"

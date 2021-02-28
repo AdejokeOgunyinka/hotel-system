@@ -13,5 +13,9 @@ class Room(models.Model):
     created_at = models.DateTimeField(auto_now_add=True, null=True)
     updated_at = models.DateTimeField(auto_now=True, null=True)
 
+    def __str__(self):
+        return f'{self.room_type_id.type} is {self.room_status_id.status}'
+    
+
     class Meta:
         app_label="db"

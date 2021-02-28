@@ -16,5 +16,9 @@ class Booking(models.Model):
     created_at = models.DateTimeField(auto_now_add=True, null=True)
     updated_at = models.DateTimeField(auto_now=True, null=True)
 
+    def __str__(self):
+        return f'{self.customer_id} booked {self.room_id}'
+    
+
     class Meta:
         app_label="db"
